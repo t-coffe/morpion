@@ -18,7 +18,39 @@
   justify-content: center;
 }
 
-.cross {
-  height: 10vw;
-  width: 10vw;
+
+.circles {
+  height: 8vw;
+  width: 8vw;
+  border-radius: 90px;
+  border: solid 5px black;
+}
+
+
+.crosses {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  transform: rotate(45deg);
+}
+
+.crosses::before,
+.crosses::after {
+  content: '';
+  position: absolute;
+  background-color: black;
+}
+
+.crosses::before {
+  width: 5px;
+  height: 100%;
+  top: 0;
+  left: 49%;
+}
+
+.crosses::after {
+  width: 100%;
+  height: 5px;
+  left: 0;
+  top: 49%;
 }
